@@ -1,24 +1,24 @@
 ---
-import "../styles/global.css";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "About Me";
+const pageTitle = 'About Me';
 
 const identity = {
-  firstName: "Jeff",
-  country: "USA",
-  occupation: "Solo Acoustic Performer",
-  hobbies: ["guitar", "walking"],
+  firstName: 'Jeff',
+  country: 'USA',
+  occupation: 'Solo Acoustic Performer',
+  hobbies: ['guitar', 'walking'],
 };
 
-const skills = ["Solo Acoustic", "Lead Guitar", "Live looping", "Arranging"];
+const skills = ['Solo Acoustic', 'Lead Guitar', 'Live looping', 'Arranging'];
 
 const happy = true;
 const finished = false;
 const goal = 3;
-const skillColor = "crimson";
-const fontWeight = "bold";
-const textCase = "uppercase";
+const skillColor = 'crimson';
+const fontWeight = 'bold';
+const textCase = 'uppercase';
 ---
 
 <html lang="en">
@@ -30,8 +30,8 @@ const textCase = "uppercase";
     <title>{pageTitle}</title>
   </head>
   <body>
-  <!--suppress HtmlUnknownTag -->
-  <BaseLayout pageTitle={pageTitle}>
+    <!--suppress HtmlUnknownTag -->
+    <BaseLayout pageTitle={pageTitle}>
       <style define:vars={{ skillColor, fontWeight, textCase }}>
         .skill {
           color: var(--skillColor);
@@ -42,13 +42,13 @@ const textCase = "uppercase";
       <h2>... and my new Astro site!</h2>
 
       <p>
-        I am working through Astro's introductory tutorial. This is the second
-        page on my website, and it's the first one I built myself!
+        I am working through Astro's introductory tutorial. This is the second page on my website,
+        and it's the first one I built myself!
       </p>
 
       <p>
-        This site will update as I complete more of the tutorial, so keep
-        checking back and see how my journey is going!
+        This site will update as I complete more of the tutorial, so keep checking back and see how
+        my journey is going!
       </p>
 
       <p>Here are a few facts about me:</p>
@@ -60,8 +60,7 @@ const textCase = "uppercase";
         {
           identity.hobbies.length >= 2 && (
             <li>
-              Two of my hobbies are: {identity.hobbies[0]} and{" "}
-              {identity.hobbies[1]}
+              Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
             </li>
           )
         }
@@ -75,13 +74,7 @@ const textCase = "uppercase";
 
       {finished && <p>I finished this tutorial!</p>}
 
-      {
-        goal === 3 ? (
-          <p>My goal is to finish in 3 days.</p>
-        ) : (
-          <p>My goal is not 3 days.</p>
-        )
-      }
+      {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
       <!--suppress HtmlUnknownTag -->
     </BaseLayout>
   </body>
